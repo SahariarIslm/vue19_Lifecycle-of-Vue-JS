@@ -6,9 +6,11 @@ new Vue({
         cars: ['Ford','Toyota'],
         robot:{
             name:"Lirab"
-        },
-        greeting: ()=>{
-            return "Hello World";
+        }
+    },
+    methods: {
+        greeting(){
+            return this.title; //this refers the values from DATA property
         }
     }
 });
