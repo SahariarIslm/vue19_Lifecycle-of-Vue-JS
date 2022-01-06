@@ -9,13 +9,12 @@
 </head>
 <body>
     <div id="app">
-        <!-- <p v-if="userAge>=allowedAge" > -->
-            <p v-if="changeuser()" ></p>
+        <p v-if="changeuser()" >
             <strong style='color: rgb(119, 32, 136)' >
                 Hay Luffy... Conditional Rendering Message Success
             </strong>
         </p>
-        <p v-else-if="user==='Luffy'" >
+        <p v-else-if="userAge>=allowedAge" >
             <strong style='color: green' >
                 Conditional Rendering Message Success
             </strong>
