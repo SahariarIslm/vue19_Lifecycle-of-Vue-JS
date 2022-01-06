@@ -10,7 +10,17 @@
 <body>
     <div id="app">
         <img v-bind:src="src" v-bind:alt="alt"><br>
+        <hr>
         <a v-bind:href="link">Click Me</a>
+        <hr>
+        <p>{{myText}}</p>
+        <strong>=>data property</strong>
+        <hr>
+        <p v-text="myText"></p> 
+        <strong>=>(v-text)</strong>
+        <hr>
+        <p v-html="myHtml"></p> 
+        <strong>=>(v-html)</strong>
     </div>
 
     <script src="app.js" ></script>

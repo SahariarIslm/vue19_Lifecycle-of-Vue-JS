@@ -3,7 +3,9 @@ new Vue({
     data:{
         src: "https://picsum.photos/id/273/200/300",
         alt: "This is a Dog",
-        link:"https://www.facebook.com/sahariar.sabit/"
+        link:"https://www.facebook.com/sahariar.sabit/",
+        myText: "Hello Mahi",
+        myHtml: "<strong style='color: green' >Hello Nami</strong>",
     },
     methods: {
         greeting(){
