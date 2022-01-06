@@ -1,15 +1,14 @@
 new Vue({
     el: "#app",
     data:{
-        src: "https://picsum.photos/id/273/200/300",
-        alt: "This is a Dog",
-        link:"https://www.facebook.com/sahariar.sabit/",
-        myText: "Hello Mahi",
-        myHtml: "<strong style='color: green' >Hello Nami</strong>",
+        user: "Luffy",
+        userAge: 16,
+        allowedAge: 18,
+        
     },
     methods: {
-        greeting(){
-            return this.title; //this refers the values from DATA property
-        }
-    }
+        changeuser() {
+            return this.user==="Luffy" ? true : false;
+        },
+    },
 });

@@ -9,18 +9,26 @@
 </head>
 <body>
     <div id="app">
-        <img v-bind:src="src" v-bind:alt="alt"><br>
-        <hr>
-        <a v-bind:href="link">Click Me</a>
-        <hr>
-        <p>{{myText}}</p>
-        <strong>=>data property</strong>
-        <hr>
-        <p v-text="myText"></p> 
-        <strong>=>(v-text)</strong>
-        <hr>
-        <p v-html="myHtml"></p> 
-        <strong>=>(v-html)</strong>
+        <!-- <p v-if="userAge>=allowedAge" > -->
+            <p v-if="changeuser()" ></p>
+            <strong style='color: rgb(119, 32, 136)' >
+                Hay Luffy... Conditional Rendering Message Success
+            </strong>
+        </p>
+        <p v-else-if="user==='Luffy'" >
+            <strong style='color: green' >
+                Conditional Rendering Message Success
+            </strong>
+        </p>
+        <!-- <h1>Pakhi</h1> 
+        <h2 style='color: rgb(194, 50, 31)'>
+            This is giving error for Conditional Rendering check console log
+        </h2>  -->
+        <p v-else="userAge>=allowedAge" >
+            <strong style='color: rgb(240, 188, 46)' >
+                Conditional Rendering Message Went Wrong
+            </strong>
+        </p>
     </div>
 
     <script src="app.js" ></script>
