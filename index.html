@@ -9,27 +9,24 @@
 </head>
 <body>
     <div id="app">
-        <p v-if="changeuser()" >
-            <strong style='color: rgb(119, 32, 136)' >
-                Hay Luffy... Conditional Rendering Message Success
-            </strong>
+        <p v-show="user==='Luffy'" >
+            Show it
         </p>
-        <p v-else-if="userAge>=allowedAge" >
-            <strong style='color: green' >
-                Conditional Rendering Message Success
-            </strong>
-        </p>
-        <!-- <h1>Pakhi</h1> 
-        <h2 style='color: rgb(194, 50, 31)'>
-            This is giving error for Conditional Rendering check console log
-        </h2>  -->
-        <p v-else="userAge>=allowedAge" >
-            <strong style='color: rgb(240, 188, 46)' >
-                Conditional Rendering Message Went Wrong
-            </strong>
+        <p v-show="user!=='Luffy'" >
+             Don't show it... 
         </p>
     </div>
 
+<!-- v-if vs v-show
+
+v-if is “real” conditional rendering because it ensures that event listeners and child components inside the conditional block are properly destroyed and re-created during toggles.
+
+v-if is also lazy: if the condition is false on initial render, it will not do anything - the conditional block won’t be rendered until the condition becomes true for the first time.
+
+In comparison, v-show is much simpler - the element is always rendered regardless of initial condition, with CSS-based toggling.
+
+Generally speaking, v-if has higher toggle costs while v-show has higher initial render costs. So prefer v-show if you need to toggle something very often, and prefer v-if if the condition is unlikely to change at runtime. -->
+
     <script src="app.js" ></script>
 </body>
-</html>
+</html> 
