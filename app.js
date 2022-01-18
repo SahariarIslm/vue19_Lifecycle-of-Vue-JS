@@ -1,11 +1,17 @@
 new Vue({
     el: "#app",
     data:{
-        cars: ['BMW','Ford','Toyota'],
-        user: {
-            name: 'Sabit',
-            age: 25,
-            country: 'Bangladesh'
+        name: 'Mahi',
+        x: 0,
+        y: 0
+    },
+    methods: {
+        updateName(){
+            this.name = 'Rafee'
+        },
+        getCoord(event){
+            this.x = event.clientX;
+            this.y = event.clientY
         }
     }
 });

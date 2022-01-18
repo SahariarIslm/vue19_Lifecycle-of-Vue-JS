@@ -9,21 +9,25 @@
 </head>
 <body>
     <div id="app">
-        <p v-for="(car,index) in cars" >
-            <!-- <div>{{car}}</div> // this will give error since this {{car}} is in another element where for loop is not decleared -->
-            {{index}} : {{car}}
-        </p>
+        <div>
+            <h1>{{name}}</h1>
+            <button v-on:click="updateName">Clink Me</button>
+        </div>
         <hr>
-        <p v-for="(value,index,key) in user" >
-            {{key}} : {{index}} : {{value}}
-        </p>
-        <hr>
-        <!-- rendering numbers in loop -->
-        <p v-for="n in 10" >
-            {{n}} 
-        </p>
+        <div v-on:mousemove="getCoord" class="box">
+            Hover Me
+        </div>
+        <p>X: {{x}}</p>
+        <p>Y: {{y}}</p>
     </div>
 
     <script src="app.js" ></script>
 </body>
+<style>
+    .box{
+        background-color: brown;
+        width: 400px;
+        height: 400px;
+    }
+</style>
 </html> 
