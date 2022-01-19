@@ -10,24 +10,14 @@
 <body>
     <div id="app">
         <div>
-            <h1>{{name}}</h1>
-            <button v-on:click="updateName">Clink Me</button>
+            <form v-on:submit.prevent="handleForm">
+                <input type="text">
+                <button type="submit" >Submit</button>
+            </form>
         </div>
-        <hr>
-        <div v-on:mousemove="getCoord" class="box">
-            Hover Me
-        </div>
-        <p>X: {{x}}</p>
-        <p>Y: {{y}}</p>
     </div>
 
     <script src="app.js" ></script>
 </body>
-<style>
-    .box{
-        background-color: brown;
-        width: 400px;
-        height: 400px;
-    }
-</style>
+
 </html> 

@@ -2,16 +2,19 @@ new Vue({
     el: "#app",
     data:{
         name: 'Mahi',
-        x: 0,
-        y: 0
     },
     methods: {
-        updateName(){
-            this.name = 'Rafee'
+        updateName(newName,event){
+            this.name = newName;
+            console.log(event);
         },
-        getCoord(event){
-            this.x = event.clientX;
-            this.y = event.clientY
-        }
+        // handleForm(event){
+        //     event.preventDefault();
+        //     console.log('submit form');
+        // },
+        handleForm(){
+            console.log('submit form');
+        },
+        
     }
 });
