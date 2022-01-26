@@ -1,18 +1,12 @@
-const app11 = new Vue({
-  el: "#app1",
+const temp = `<p>My name is {{name}}</p>`; //for larger scale html and dynamic contents
+
+const app1 = new Vue({
   data: {
-    value: "1st",
+    name: "Luffy",
   },
-  methods: {
-    changeValue() {
-      app12.value = "Changed";
-    },
-  },
+  template: temp
 });
 
-const app12 = new Vue({
-  el: "#app2",
-  data: {
-    value: "2nd",
-  },
-});
+setTimeout(()=>{
+  app1.$mount('#app'); //1.builtin method, 2.it mounts the whole vue instense 
+},2000) //builtin method for controlling time ****
