@@ -1,28 +1,18 @@
-new Vue({
-    el: "#app",
-    data:{
-        a:0,
-        b:0,
-        salary:10
+const app11 = new Vue({
+  el: "#app1",
+  data: {
+    value: "1st",
+  },
+  methods: {
+    changeValue() {
+      app12.value = "Changed";
     },
-    methods: {
-        // addToA(){
-        //     console.log('add a');
-        //     return this.a + this.salary;
-        // },
-        // addToB(){
-        //     console.log('add b');
-        //     return this.b + this.salary;
-        // }
-    },
-    computed: {
-        caddToA(){
-            console.log('add a');
-            return this.a + this.salary;
-        },
-        caddToB(){
-            console.log('add b');
-            return this.b + this.salary;
-        }
-    }
-});                        
+  },
+});
+
+const app12 = new Vue({
+  el: "#app2",
+  data: {
+    value: "2nd",
+  },
+});

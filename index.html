@@ -8,19 +8,19 @@
         <script src="vue.js" ></script>
     </head>
     <body>
-        <div id="app">
-            <button v-on:click="a++">Add A</button>
-            <button v-on:click="b++">Add B</button>
+        <div id="app1">
+            <p>This is first instance {{value}}</p>
+        
+            <br>
+            <p>Accessing Second instance : </p>
+            <br>
+        
+            <button @click="changeValue">Click Me</button>
+        </div>
 
-
-            <p>A = {{a}}</p>
-            <p>B = {{b}}</p>
-
-
-            <!-- <p>Salary + A = {{addToA()}}</p>
-            <p>Salary + B = {{addToB()}}</p> -->
-            <p>Salary + A = {{caddToA}}</p>
-            <p>Salary + B = {{caddToB}}</p>
+        <hr>
+        <div id="app2">
+            <p>This is second instance {{value}}</p>
         </div>
 
         <script src="app.js" ></script>
