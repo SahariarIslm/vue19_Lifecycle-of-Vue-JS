@@ -1,12 +1,43 @@
-const temp = `<p>My name is {{name}}</p>`; //for larger scale html and dynamic contents
 
-const app1 = new Vue({
-  data: {
-    name: "Luffy",
+
+new Vue({
+  el:'#app',
+  data:{
+    name: "Luffy"
   },
-  template: temp
+  methods: {
+    updateName(){
+      this.name = "Rafee";
+    },
+    killIt(){
+      this.$destroy();
+    }
+  },
+  mounted(){
+    console.log('Mounted');
+  },
+  beforeCreate() {
+    console.log('running before create');
+  },
+  created(){
+    console.log('running created');
+  },
+  beforeMount(){
+    console.log('running before mount');
+  },
+  beforeUpdate(){
+    console.log('before update');
+  },
+  updated(){
+    console.log('updated');
+  },
+  beforeDestroy(){
+    console.log('before destroy');
+  },
+  destroyed(){
+    console.log('destroyed');
+  }
+  
 });
 
-setTimeout(()=>{
-  app1.$mount('#app'); //1.builtin method, 2.it mounts the whole vue instense 
-},2000) //builtin method for controlling time ****
+
